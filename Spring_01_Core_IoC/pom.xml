@@ -11,6 +11,21 @@
 
     <groupId>com.Cydeo</groupId>
     <artifactId>Spring_01_Core_IoC</artifactId>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.15</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
