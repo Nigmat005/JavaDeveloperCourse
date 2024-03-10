@@ -27,11 +27,19 @@ public class CydeoApp {
 
         System.out.println(Objects.requireNonNull(applicationContext_Container.getClassLoader()).getClass().getName());
 
-        String str = applicationContext_Container.getBean(String.class);
+        String str = applicationContext_Container.getBean("string",String.class);
         System.out.println(str);
+
+
+        String str2 = applicationContext_Container.getBean("string2",String.class);
+        System.out.println(str2);
 
         Integer integer=applicationContext_Container.getBean(Integer.class);
         System.out.println(integer);
+
+        Integer integer2=applicationContext_Container.getBean("integer2",Integer.class);
+        System.out.println(integer2);
+
 
 
 
