@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Data
 public class Person {
     private String name;
+    @Autowired
     private Car car;
 //    @Autowired
 //    public Person(Car car) {

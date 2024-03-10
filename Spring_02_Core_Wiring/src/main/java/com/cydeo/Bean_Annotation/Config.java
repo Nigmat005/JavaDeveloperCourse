@@ -24,12 +24,31 @@ public class Config {
 //        return person;
 //    }
 
+     //AutoWiring thru Person class' Constructor
+//    @Bean
+//    public Person person(){
+//        Person person=new Person(car());
+//        person.setName("Nick");
+//        return person;
+//    }
+
+
+
+
+//    @Bean
+//    @Autowired
+//    public Person person(Car car){
+//        Person person=new Person();
+//        person.setName("Nick");
+//        person.setCar(car);
+//        return person;
+//    }
+
+    //AutoWire thru Person class field
     @Bean
-    @Autowired
-    public Person person(Car car){
+    public Person person(){
         Person person=new Person();
         person.setName("Nick");
-        person.setCar(car);
         return person;
     }
 }
