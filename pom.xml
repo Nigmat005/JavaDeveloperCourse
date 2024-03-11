@@ -12,6 +12,7 @@
         <module>Spring_01_Core_IoC</module>
         <module>Spring_02_Core_Wiring</module>
         <module>Spring_03_Core_DI</module>
+        <module>Spring_04_Abstraction</module>
     </modules>
 
     <properties>
