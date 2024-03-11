@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/Spring_03_Core_DI/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring_04_Abstraction/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring_04_Abstraction/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_05_BeanScope/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_05_BeanScope/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
