@@ -40,9 +40,10 @@ public class CarController {
 
     @RequestMapping("/carInfo/{carMake}/{carModel}/{producedYear}") // localhost:8080/car/carInfo/Tesla/ModelY/2025
     public String getCarInfo(
-            @PathVariable(value = "carMake",required = false) String make,
-            @PathVariable (value = "carModel",required = false)String carModel,
-            @PathVariable(value = "producedYear",required = false) Integer year
+            // for pathParameter it ,unlike the requestParameter, can NOT be empty.
+            @PathVariable(value = "carMake") String make,
+            @PathVariable (value = "carModel")String carModel,
+            @PathVariable(value = "producedYear") Integer year
             ,Model model){ // variable name myst be same as request Parameter name
 
         model.addAttribute("make",make);
