@@ -16,4 +16,9 @@ public class HomerController {
     public String welcomePage(){
         return "welcomePage.html";
     }
+// if name is not giving in @RequestMapping annotation, it will add "/" by default and will still run whatever is returned
+    @RequestMapping
+    public String defaultPage(){
+        return "welcomePage.html";
+    }
 }
