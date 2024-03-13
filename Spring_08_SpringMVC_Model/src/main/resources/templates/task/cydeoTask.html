@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is task about MVN Model</title>
+</head>
+<body>
+<!--<h1 th:text="${taskObject.getFirstName()}"></h1>-->
+<table>
+    <thead>
+    <tr>
+        <td>FirstName</td>
+        <td>LastName</td>
+        <td> Age</td>
+        <td>Gender</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${Mike.getFirstName()}"></td>
+        <td th:text="${Mike.getLastName()}"></td>
+        <td th:text="${Mike.getAge()}"></td>
+        <td th:text="${Mike.getGenderType()}"></td>
+    </tr>
+    <tr>
+        <td th:text="${Tom.getFirstName()}"></td>
+        <td th:text="${Tom.getLastName()}"></td>
+        <td th:text="${Tom.getAge()}"></td>
+        <td th:text="${Tom.getGenderType()}"></td>
+    </tr>
+    <tr>
+        <td th:text="${Ammy.getFirstName()}"></td>
+        <td th:text="${Ammy.getLastName()}"></td>
+        <td th:text="${Ammy.getAge()}"></td>
+        <td th:text="${Ammy.getGenderType()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
