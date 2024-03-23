@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Register</title>
+</head>
+<body>
+ <h3>Welcome, New Student</h3>
+<!-- Displaying Value-->
+ <h2 th:text="${student.get(0).firstName}"></h2>
+ <h2 th:text="${student.get(1).firstName}"></h2>
+ <h2 th:text="${student.get(2).firstName}"></h2>
+<!--Concatenation-->
+ <h2 th:text="${'Student first name is: '+student.get(0).firstName}"></h2>
+ <h2 th:text="${'Student last name is: '+student.get(0).lastName}"></h2>
+ <h2 th:text="${'Student age name is: '+student.get(0).age}"></h2>
+ <h2 th:text="${'Student living state is: '+student.get(0).state}"></h2>
+
+<!--Link-->
+
+</body>
+</html>
