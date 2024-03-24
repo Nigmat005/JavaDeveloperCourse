@@ -6,6 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @Controller
 @RequestMapping("/cydeoTask")
 public class taskController {
@@ -19,9 +23,8 @@ public class taskController {
         Task Mike=new Task("Mike", "Smith", 45,Gender.MALE);
         Task Tom=new Task("Tom", "Hanks", 65,Gender.MALE);
         Task Ammy=new Task("Ammy", "Bryan", 25,Gender.FEMALE);
-        model.addAttribute("Mike",Mike);
-        model.addAttribute("Tom",Tom);
-        model.addAttribute("Ammy",Ammy);
+        List<Task> taskList=new ArrayList<>(Arrays.asList(Mike,Tom,Ammy));
+        model.addAttribute("taskObject",taskList);
         return "/task/cydeoTask";
     }
 }

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Welcome to Customer Page to check your car</h1>
+<h3>Please click below link to generate your car</h3>
+<br>
+<!--<a th:href="@{/car/Info(carMake='Tesla',carModel='ModelY',producedYear=2023)}">Click Here</a>-->
+<a th:href="@{/car/Info(carMake=${carObject.get(0).getMake()},carModel=${carObject.get(0).getModel()},producedYear=${carObject.get(0).getYear()})}">Click Here</a>
+</body>
+</html>

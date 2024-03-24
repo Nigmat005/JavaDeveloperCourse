@@ -16,24 +16,32 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td th:text="${Mike.getFirstName()}"></td>
-        <td th:text="${Mike.getLastName()}"></td>
-        <td th:text="${Mike.getAge()}"></td>
-        <td th:text="${Mike.getGenderType()}"></td>
-    </tr>
-    <tr>
-        <td th:text="${Tom.getFirstName()}"></td>
-        <td th:text="${Tom.getLastName()}"></td>
-        <td th:text="${Tom.getAge()}"></td>
-        <td th:text="${Tom.getGenderType()}"></td>
-    </tr>
-    <tr>
-        <td th:text="${Ammy.getFirstName()}"></td>
-        <td th:text="${Ammy.getLastName()}"></td>
-        <td th:text="${Ammy.getAge()}"></td>
-        <td th:text="${Ammy.getGenderType()}"></td>
-    </tr>
+<!--    <tr>-->
+<!--        <td th:text="${Mike.getFirstName()}"></td>-->
+<!--        <td th:text="${Mike.getLastName()}"></td>-->
+<!--        <td th:text="${Mike.getAge()}"></td>-->
+<!--        <td th:text="${Mike.getGenderType()}"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td th:text="${Tom.getFirstName()}"></td>-->
+<!--        <td th:text="${Tom.getLastName()}"></td>-->
+<!--        <td th:text="${Tom.getAge()}"></td>-->
+<!--        <td th:text="${Tom.getGenderType()}"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td th:text="${Ammy.getFirstName()}"></td>-->
+<!--        <td th:text="${Ammy.getLastName()}"></td>-->
+<!--        <td th:text="${Ammy.getAge()}"></td>-->
+<!--        <td th:text="${Ammy.getGenderType()}"></td>-->
+<!--    </tr>-->
+
+<!-- with Iteration-->
+<tr th:each="each:${taskObject}">
+    <td th:text="${each.getFirstName()}"></td>
+    <td th:text="${each.getLastName()}"></td>
+    <td th:text="${each.getAge()}"></td>
+    <td th:text="${each.getGenderType()}"></td>
+</tr>
     </tbody>
 </table>
 </body>

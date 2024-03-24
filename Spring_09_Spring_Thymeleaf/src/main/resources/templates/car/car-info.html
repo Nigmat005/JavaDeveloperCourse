@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn how to get data from UI with request parameter </title>
+</head>
+<body>
+<h1>Car Generated</h1>
+<h1>Example of getting car info</h1>
+<h1>This is what you are getting for car info you passed thru link as parameter</h1>
+ <h2 th:text="'Make is: '+${car.getMake()}">MAKE!!!</h2>
+ <h2 th:text="'Model is: '+${car.getModel()}">MODEL!!!</h2>
+ <h2 th:text="'Year is: '+${car.getYear()}">YEAR!!!</h2>
+
+</body>
+</html>
