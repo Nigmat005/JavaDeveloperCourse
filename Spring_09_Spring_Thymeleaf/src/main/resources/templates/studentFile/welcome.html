@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Spring MVC</title>
+    <link th:href="@{/css/bootstrap-4.1.3-dist/css/bootstrap.css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
 </head>
 <body>
 <h1>Welcome to Spring MVC Model Part!!!</h1>
 <h2>
-Do you know that you can actually send data from method in controller class,
+    Do you know that you can actually send data from method in controller class,
     in order to do that you need to use model concept.
 </h2>
-<h2 th:text="${definition}",color="red"></h2>
-<h2 th:text="${course}"></h2>
+<h2 class="display-1 text-danger background-color: red">Welcome to Cydeo</h2>
+<h2 class="cydeo">My Custom CSS</h2>
+
+<img th:src="@{/images/welcome-38249.png}">
+<div th:replace="/fragments/index:: footer-menu">Menu</div>
+<div th:replace="/fragments/index :: main-menu">Main Menu</div>
 </body>
 </html>
