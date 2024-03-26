@@ -43,7 +43,7 @@ you will see the message of (Comment Service Is Instantiated) in constructor of 
 //@Scope(BeanDefinition.SCOPE_PROTOTYPE)
 @Scope(BeanDefinition.SCOPE_SINGLETON)
 @Lazy
-// LAzy annotation will only help you create Object(Beans) only after object or dependencies are required
+// Lazy annotation will only help you create Object(Beans) only after object or dependencies are required
 // instead of once creating container
 
 public class CommentService {

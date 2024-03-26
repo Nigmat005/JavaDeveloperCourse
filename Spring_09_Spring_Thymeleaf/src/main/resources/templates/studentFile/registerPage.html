@@ -32,5 +32,13 @@
 <ul>
  <li th:each="studentList:${student}" th:text="${studentList}">List of Students</li>
 </ul>
+
+<!--Conditional logic-->
+<div th:text="${student.get(0).getAge()>25 ? 'Eligible' :  'NOT Eligible'}"></div>
+
+<div>
+ <span th:if="${student.get(0).getState()=='Arizona'}">Arizona</span>
+ <span th:unless="${student.get(0).getState()=='Arizona'}">Not Arizona</span>
+</div>
 </body>
 </html>
