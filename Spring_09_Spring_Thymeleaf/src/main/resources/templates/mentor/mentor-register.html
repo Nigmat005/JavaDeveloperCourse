@@ -17,9 +17,11 @@
 <body>
 <h3 align="center" style="color: orange">Mentor Registration</h3>
 <div align="center">
-<form th:object="${mentor}">
+<form th:action="@{/mentor/register}" method="post" th:object="${mentor}">
+
     <label style="font-weight: bold" class="col-form-label">First Name:</label>
     <input th:field="*{firstName}" type="text" id="firstName" name="firstName" class="form-control" placeholder="first name"><br>
+
     <label style="font-weight: bold" class="col-form-label">Last Name:</label>
     <input type="text" id="lastname" name="lastname" class="form-control" placeholder="last name" th:field="*{lastName}"><br>
     <hr>
@@ -62,8 +64,8 @@
     <label> Company:</label>
     <textarea th:field="*{company}"></textarea> <br>
     <button type="submit" style="color: #28a745"> Register </button>
-
 </form>
+<!--    <h2 th:text="${mentor.firstName==null ? 'Register is Sucess' : 'Something Went Wrong'}"></h2>-->
 </div>
 
 <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
