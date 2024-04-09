@@ -34,15 +34,26 @@ public class CarController {
         model.addAttribute("carObject",DataGenerator.createCar());
         return "/car/customerWelcome";
     }
-    @RequestMapping("/Info")
-    public String CarInfo(@RequestParam(value = "carMake") String make,
-                          @RequestParam(value = "carModel") String carModel,
-                          @RequestParam(value = "producedYear")int year,
+//    @RequestMapping("/Info")
+//    public String CarInfo(@RequestParam(value = "carMake") String make,
+//                          @RequestParam(value = "carModel") String carModel,
+//                          @RequestParam(value = "producedYear")int year,
+//                          Model model){
+//         Car car=new Car(make,carModel,year);
+//         model.addAttribute("car",car);
+//        System.out.println("carMake is: "+make+"\n carModel is:"+carModel+"\n producedYear is: "+year);
+//
+//       return "/car/car-info";
+
+    @RequestMapping("/Info/{carMake}/{carModel}/{producedYear}")
+    public String CarInfo(@PathVariable(value = "carMake") String make,
+                          @PathVariable(value = "carModel") String carModel,
+                          @PathVariable(value = "producedYear")int year,
                           Model model){
-         Car car=new Car(make,carModel,year);
-         model.addAttribute("car",car);
+        Car car=new Car(make,carModel,year);
+        model.addAttribute("car",car);
         System.out.println("carMake is: "+make+"\n carModel is:"+carModel+"\n producedYear is: "+year);
 
-       return "/car/car-info";
-   }
+        return "/car/car-info";
+  }
 }

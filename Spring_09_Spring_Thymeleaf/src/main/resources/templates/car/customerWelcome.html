@@ -9,6 +9,9 @@
 <h3>Please click below link to generate your car</h3>
 <br>
 <!--<a th:href="@{/car/Info(carMake='Tesla',carModel='ModelY',producedYear=2023)}">Click Here</a>-->
-<a th:href="@{/car/Info(carMake=${carObject.get(0).getMake()},carModel=${carObject.get(0).getModel()},producedYear=${carObject.get(0).getYear()})}">Click Here</a>
+<!--<a th:href="@{/car/Info(carMake=${carObject.get(0).getMake()},carModel=${carObject.get(0).getModel()},producedYear=${carObject.get(0).getYear()})}">Click Here</a>-->
+
+<!--Below is for PathVariable-->
+<a th:href="@{/car/Info/{carMake}/{carModel}/{producedYear}(carMake=${carObject.get(0).getMake()},carModel=${carObject.get(0).getModel()},producedYear=${carObject.get(0).getYear()})}">Click Here</a>
 </body>
 </html>

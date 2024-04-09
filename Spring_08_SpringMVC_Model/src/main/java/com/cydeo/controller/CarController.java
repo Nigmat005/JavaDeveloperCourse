@@ -15,7 +15,7 @@ public class CarController {
            @RequestParam String make,
            @RequestParam String carModel,
            @RequestParam Integer year
-           ,Model model){ // variable name myst be same as requesr Parameter name
+           ,Model model){ // variable name myst be same as requester Parameter name
 
        model.addAttribute("make",make);
        model.addAttribute("carModel",carModel);
