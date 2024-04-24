@@ -1,4 +1,4 @@
-package com.cydeo.spring_10_orm_tablecreation;
+package com.cydeo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
