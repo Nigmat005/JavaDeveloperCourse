@@ -3,13 +3,14 @@ package com.cydeo.bootstrape;
 import com.cydeo.model.Car;
 import com.cydeo.model.Student;
 import com.github.javafaker.Faker;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class DataGenerator {
+public class DataGenerator  {
     public static Faker javaFaker;
     public static List<Student> students;
     public static List<Student> createStudent(){
@@ -36,6 +37,11 @@ public class DataGenerator {
        );
        return cars;
     };
+//
+//    @Override
+//    public void run(String... args) throws Exception {
+//        createCar();
+//    }
 
 
 }
