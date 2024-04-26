@@ -22,9 +22,16 @@ public class Employee extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+//    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
     @JoinColumn(name = "joinedDepartment")
     private Department department;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="RegionId")
+    private Region region;
+
+
 
 
     public Employee(String firstName, String lastName, String email, LocalDate hireDate, int salary,Gender gender ) {

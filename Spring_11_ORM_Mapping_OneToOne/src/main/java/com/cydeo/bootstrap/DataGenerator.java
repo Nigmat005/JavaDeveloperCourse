@@ -40,7 +40,7 @@ public class DataGenerator implements CommandLineRunner {
         Employee e5 = new Employee("Feliks", "Morffew", "fmorffew4@a8.net", LocalDate.of(2003,01,14), 55307,Gender.MALE);
 
         List<Employee> employeeList = Arrays.asList(e1,e2,e3,e4,e5);
-        employeeList.forEach(employee -> employeeRepository.save(employee));
+        employeeList.forEach(eachEmployee ->  employeeRepository.save(eachEmployee));
 
         Department d1 = new Department("Sports","Outdoors");
         Department d2 = new Department("Tools","Hardware");
@@ -48,8 +48,18 @@ public class DataGenerator implements CommandLineRunner {
         Department d4 = new Department("Phones & Tablets","Electronics");
         Department d5 = new Department("Computers","Electronics");
 
-        List<Department> departmentsList= Arrays.asList(d1,d2,d3,d4,d5);
-        departmentRepository.saveAll(departmentsList);
+//        List<Department> departmentsList= Arrays.asList(d1,d2,d3,d4,d5);
+//        departmentRepository.saveAll(departmentsList);
+
+        // add entity department into entity Employee class
+        e1.setDepartment(d1);
+        e2.setDepartment(d2);
+        e3.setDepartment(d3);
+        e4.setDepartment(d4);
+        e5.setDepartment(d5);
+
+        employeeRepository.saveAll(employeeList);
+
 
         Region r1 = new Region("Southwest","United States");
         Region r2 = new Region("Central","United States");
@@ -58,7 +68,18 @@ public class DataGenerator implements CommandLineRunner {
         Region r5 = new Region("Central","Asia");
 
         List<Region> regionList=Arrays.asList(r1,r2,r3,r4,r5);
-        regionRepository.saveAll(regionList);
+//        regionRepository.saveAll(regionList);
+
+        // add entity region into entity Employee class
+        e1.setRegion(r1);
+        e2.setRegion(r2);
+        e3.setRegion(r3);
+        e4.setRegion(r4);
+        e5.setRegion(r5);
+        employeeRepository.saveAll(employeeList);
+
+//        List<Department> departmentsList= Arrays.asList(d1,d2,d3,d4,d5);
+//        departmentRepository.saveAll(departmentsList);
 
 
 
