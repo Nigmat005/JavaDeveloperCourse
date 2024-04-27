@@ -19,8 +19,8 @@ public class Region extends BaseEntity {
  @OneToOne(mappedBy = "region")
  private Employee employee;
 
-// public Region(String region, String country) {
-//  this.region = region;
-//  this.country = country;
-// }
+ public Region(String region, String country) {
+  this.region = region;
+  this.country = country;
+ }
 }
