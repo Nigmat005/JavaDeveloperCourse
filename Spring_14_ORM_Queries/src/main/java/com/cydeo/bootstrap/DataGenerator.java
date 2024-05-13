@@ -80,6 +80,7 @@ public class DataGenerator implements CommandLineRunner {
 //        System.out.println("findByNameStartingWith "+courseRepository.findByNameStartingWith("Getting Started with Spring Security DSL"));
 //        courseRepository.streamByDescriptionsIsLike("Learn Spring Security DSL in easy steps").forEach(System.out::println);
 //        courseRepository.streamByCategory("Spring").forEach(System.out::println);
+        System.out.println("findAllByCategoryAnAndRatingGreaterThan: "+courseRepository.findAllByCategoryAndRatingGreaterThan("Spring","5"));
 //        System.out.println("---------------------Course ENDS---------------------------");
 
 
@@ -104,6 +105,15 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("readEmployeeDetailBySalary "+employeeRepository.readEmployeeDetailBySalary(BigDecimal.valueOf(154864.00)));
         System.out.println("readEmployeeDetailBySalaryParam "+employeeRepository.readEmployeeDetailBySalaryParam(BigDecimal.valueOf(154864.00)));
         System.out.println("---------------------JPQL Employee ENDS---------------------------");
+
+
+//        System.out.println("---------------------JPQL Update Employee STARTS---------------------------");
+//        employeeRepository.updateEmployeeEmail(1L);
+//        employeeRepository.updateEmployeeEmailNative(2L);
+//        System.out.println("---------------------JPQL Update Employee ENDS---------------------------");
+
+
+
 
 
 

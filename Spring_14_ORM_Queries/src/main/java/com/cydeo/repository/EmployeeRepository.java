@@ -2,9 +2,11 @@ package com.cydeo.repository;
 
 import com.cydeo.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -63,5 +65,22 @@ public interface EmployeeRepository extends JpaRepository<Employee,Long> {
 
     @Query(value = "Select * from employees where salary=:salary",nativeQuery = true)
     List<Employee> readEmployeeDetailBySalaryParam(@Param("salary") BigDecimal salary);
+
+
+
+
+    // Modifying
+    @Modifying
+    @Transactional
+    @Query("UPDATE Employee e SET e.email=''where e.id=:id")
+    void updateEmployeeEmail(@Param("id") Long id);
+
+
+    @Modifying
+    @Transactional
+    @Query(value = "UPDATE employees SET email=''where id=:id",nativeQuery = true)
+    void updateEmployeeEmailNative(@Param("id") Long id);
+
+
 
 }

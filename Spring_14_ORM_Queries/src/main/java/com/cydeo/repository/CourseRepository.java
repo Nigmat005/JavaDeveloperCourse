@@ -49,4 +49,9 @@ public interface CourseRepository extends JpaRepository<Course,Long> {
     @Query("Select d from Department d where d.division in :divisionList")
     List<Department> getDepartmentDivision (@Param("divisionList") List<String> divisionList);
 
+    @Query("select c from Course c where c.category=:category and c.rating > :rating")
+    List<Course> findAllByCategoryAndRatingGreaterThan(@Param("category") String category, @Param("rating") String ratingNum );
+
+
+
 }
